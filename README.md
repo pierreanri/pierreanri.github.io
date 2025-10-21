@@ -2,9 +2,12 @@
 
 This website was built using React + Three. It displays and ASCII art containing my name (Pierre) and it has a wave animation too.
 
-It also has 3 links to my Linkedin, GitHub and my email.
+It also includes links to:
+- Linkedin 
+- GitHub
+- Email
 
-## How to run:
+## How to run: :running:
 
 Requirements:
 - Node 18+ (LTS) or Node 20, npm (or yarn/pnpm), Git.
