@@ -1,6 +1,6 @@
 # Pierre-Anri's Website :computer:
 
-This website was built using React + Three. It displays ASCII art of my name (Pierre) and it has a wave animation too.
+This website was built using React + Three. It displays ASCII art of my name (Pierre) and it has a wave animation and it's interactive too.
 
 It also includes links to:
 - Linkedin 
