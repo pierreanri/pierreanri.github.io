@@ -31,5 +31,3 @@ npm install
 ```bash
 npm run dev
 ```
-
-If you've made it this far, here's a cookie. :cookie:
