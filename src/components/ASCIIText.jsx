@@ -421,7 +421,7 @@ class CanvAscii {
 }
 
 export default function ASCIIText({
-  text = 'David!',
+  text = 'Pierre',
   asciiFontSize = 8,
   textFontSize = 200,
   textColor = '#fdf9f3',
