@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import ASCIIText from "./components/ASCIIText";
 import linkedinIcon from "./assets/linkedin.svg";
@@ -6,6 +6,17 @@ import githubIcon from "./assets/github.svg";
 import mailIcon from "./assets/envelope.svg";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       style={{
@@ -25,22 +36,30 @@ function App() {
           position: "relative",
           width: "100%",
           height: "100%",
-          transform: "translateY(-20px)",
+          transform: `translateY(${isMobile ? '-70px' : '-20px'})`,
         }}
       >
-        <ASCIIText text="Pierre" enableWaves={true} asciiFontSize={9} />
+        <ASCIIText
+          text="Pierre"
+          enableWaves={true}
+          asciiFontSize={isMobile ? 6 : 9}
+          planeBaseHeight={isMobile ? 14 : 8}
+          vertical={isMobile}
+        />
       </div>
 
-      <div className="socials"
-      style={{
-      position: "absolute",
-      top: "80%", 
-      left: "50%",
-      transform: "translateX(-50%)",
-      display: "flex",
-      gap: "2rem",
-      zIndex: 10,
-    }}>
+      <div
+        className="socials"
+        style={{
+          position: "absolute",
+          top: "80%",
+          left: "50%",
+          transform: "translateX(-50%)",
+          display: "flex",
+          gap: "2rem",
+          zIndex: 10,
+        }}
+      >
         <a
           href="https://linkedin.com/in/pierreanri"
           target="_blank"
