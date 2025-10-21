@@ -13,5 +13,18 @@ Requirements:
 
 ```bash
 git clone https://github.com/pierreanri/pierreanri.github.io.git
+# Navigate into the project folder
 cd repo
+```
+
+### 2. Install the dependancies
+
+```bash
+npm install
+```
+
+### 3. Run development server
+
+```bash
+npm run dev
 ```
